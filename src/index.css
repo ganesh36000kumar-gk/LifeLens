@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    /* Prevent overflow on all elements by default */
+    min-width: 0;
+  }
+
+  html {
+    width: 100%;
+    max-width: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    /* Prevent accidental text clipping and long word breaks */
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  /* Prevent text selection and image dragging artifacts */
+  img, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Ensure form controls never overflow containers */
+  input, textarea, select, button {
+    font-family: inherit;
+    max-width: 100%;
+    font-size: 100%;
+  }
+
+  /* Prevent headings and paragraphs from overflowing */
+  h1, h2, h3, h4, h5, h6, p, span, label {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}
+
+/* Responsive Container System */
+.app-container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 12px;
+}
+
+@media (min-width: 480px) {
+  .app-container {
+    padding-inline: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .app-container {
+    padding-inline: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-container {
+    padding-inline: 32px;
+  }
+}
+
+/* Custom smooth touch scroll utility */
+.touch-scroll {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar while preserving functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

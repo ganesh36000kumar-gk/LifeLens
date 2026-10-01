@@ -1,0 +1,8 @@
+{
+  "name": "Life Decision Simulator",
+  "description": "Deterministic life decision simulation and scenario modeling platform. Explore financial consequences, cash flow, sensitivity, risk, and opportunity costs before you decide.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
